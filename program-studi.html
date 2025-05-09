@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Program Studi - Fakultas Teknik</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* CSS untuk memberi background pada menu */
+        #mainNav {
+            background-image: url('assets/img/header-bg.jpg');  /* Ganti dengan URL gambar background yang sesuai */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Fakultas Teknik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="program-studi.html">Program Studi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fasilitas.html">Fasilitas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dosen.html">Dosen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Program Studi Section-->
+    <section class="page-section" id="programs">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Program Studi</h2>
+                <h3 class="section-subheading text-muted">Kami menawarkan berbagai program studi yang sesuai dengan kebutuhan industri.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4 class="my-3">Teknik Informatika</h4>
+                    <p class="text-muted">Menyediakan pengetahuan dan keterampilan dalam bidang teknologi informasi untuk mempersiapkan karir di dunia digital.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="my-3">Teknik Mesin</h4>
+                    <p class="text-muted">Fokus pada desain dan produksi mesin serta sistem untuk industri dan pengembangan teknologi baru.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="my-3">Teknik Elektro</h4>
+                    <p class="text-muted">Memahami teori dasar teknik elektro dan aplikasinya dalam berbagai perangkat dan sistem elektronik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tombol Kembali ke Beranda -->
+    <div class="text-center mt-4">
+        <a class="btn btn-primary btn-xl text-uppercase" href="index.html">Kembali ke Beranda</a>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Fakultas Teknik - Universitas XYZ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Icons (for the menu toggle and other functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript to dynamically add active class to the menu item -->
+    <script>
+        var currentPage = window.location.pathname.split("/").pop();
+        var menuItems = document.querySelectorAll(".nav-link");
+
+        menuItems.forEach(function(item) {
+            item.classList.remove("active");
+            if (item.getAttribute("href") === currentPage) {
+                item.classList.add("active");
+            }
+        });
+    </script>
+</body>
+</html>
