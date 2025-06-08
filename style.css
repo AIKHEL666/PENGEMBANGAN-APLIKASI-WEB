@@ -1,0 +1,190 @@
+/* style.css (Versi Profesional Final) */
+
+/* --- Import Font & Definisi Variabel Warna --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0d2c4f;      /* Biru Gelap - Untuk Navbar, Footer, Judul */
+    --secondary-color: #1a5e63;   /* Teal Gelap - Untuk Aksen, Tombol */
+    --accent-color: #ffc107;      /* Kuning - Untuk Highlight (Opsional) */
+    --background-color: #f8f9fa;  /* Abu-abu Sangat Terang - Latar Belakang Body */
+    --text-color: #343a40;        /* Abu-abu Gelap - Teks Utama */
+    --light-gray: #e9ecef;        /* Abu-abu Terang - Border, Latar Belakang Kartu */
+}
+
+/* --- Aturan CSS Global --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+/* --- Navbar Solid & Sticky (Versi Stabil) --- */
+.navbar.sticky-top {
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #fff;
+}
+
+/* --- Tombol --- */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #154b4f; /* Versi lebih gelap dari secondary */
+    border-color: #154b4f;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --- Hero Section (index.html) --- */
+.hero-section {
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(rgba(13, 44, 79, 0.85), rgba(13, 44, 79, 0.85)), url('assets/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* --- Kartu (Card) --- */
+.card {
+    border: 1px solid var(--light-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- Style untuk label keahlian dosen --- */
+.skill-badge {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.4em 0.8em;
+    margin: 3px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+/* --- Halaman Detail Prodi --- */
+.prodi-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 60px 0;
+}
+.prodi-header h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+.prodi-info-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.prodi-info-box .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.prodi-info-box .info-item i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 60px 0 20px 0;
+    margin-top: auto;
+}
+.footer h5 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+}
